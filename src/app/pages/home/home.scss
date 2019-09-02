@@ -1,0 +1,9 @@
+@import '../../../config/colors.scss';
+
+#image {
+    height: 600px;
+    background: url('../../../assets/img/darthvader.png') no-repeat center;
+    background-color: $primarycolor;
+    background-blend-mode: lighten;
+    background-size: contain;
+}

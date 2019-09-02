@@ -1,0 +1,67 @@
+@import '../../../config/colors.scss';
+
+.main-skills {
+    padding: 40px;
+}
+
+.main-skills h1 {
+    color: $whitecolor;
+    font-size: 8vh;
+}
+
+.amp {
+    color: $contrastcolor;
+}
+
+.skill {
+    font-size: 30px;
+    color: $whitecolor;
+    letter-spacing: 3px;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 20px;
+}
+
+.underlined {
+    background-image: linear-gradient(to right, $contrastcolor  0, $contrastcolor 100%);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    animation: moveAcross .5s;
+    
+    &:hover {
+        color: $whitecolor;
+        background-size: 100% 100%;
+        font-weight: bold;
+    }
+}
+
+.underlined:nth-child(odd) {
+    color: $contrastcolor;
+    background-image: linear-gradient(to right, $whitecolor  0, $whitecolor 100%);
+
+    &:hover {
+        color: $contrastcolor;
+        background-size: 100% 100%;
+        font-weight: bold;
+    }
+}
+
+@keyframes moveAcross {
+    0% {
+      background-size: 0 100%;
+    }
+    99% {
+      background-size: 100% 100%;
+    }
+    100% {
+        background-size: 100% -0.1em;
+    }
+}
+
+// 100 loop iterations
+@for $i from 1 through 100 { 
+    .underlined:nth-child(#{$i}) {
+        animation-delay: #{$i/2}s;
+    }
+}

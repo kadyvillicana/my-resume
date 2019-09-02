@@ -23,11 +23,21 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fill {
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .none-display-big-screen {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .padding-top-on-big-screen {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
   }
 }

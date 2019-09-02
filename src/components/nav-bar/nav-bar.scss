@@ -1,0 +1,76 @@
+@import '../../config/colors.scss';
+
+//TODO add some effect to the text
+
+.main {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+}
+
+.topmenu {
+    float: left;
+}
+
+.menubutton {
+    width: 300px;
+    height: 80px;
+    background-color: $contrastcolor;
+    text-align: center;
+
+    p {
+        line-height: 85px;
+        letter-spacing: .4em;
+        color: $whitecolor;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.sidenav {
+    background-color: $primarycolor;
+    font-size: 20px;
+    height: 80px;
+    float: right;
+    vertical-align: middle;
+
+    p {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: $whitecolor;
+        margin: 0;
+    }
+
+    a {
+        line-height: 85px;
+        text-align: center;
+        height: 80px;
+        display: block;
+        float: left;
+        text-decoration: none;
+    }
+
+    a:hover {
+        p {
+            color: $contrastcolor;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    }
+}
+
+.selected {
+    font-size: 30px;
+
+    p {
+        color: $contrastcolor;
+        font-weight: bold;
+    }
+
+}

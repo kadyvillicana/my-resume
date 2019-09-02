@@ -1,0 +1,89 @@
+@import '../../config/colors.scss';
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-bottom: 80px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.timeline-container::after {
+    background-color: $contrastcolor;
+    content: '';
+    position: absolute;
+    left: 5vh;
+    width: 2px;
+    height: 100%;
+}
+
+.timeline-item {
+    margin-left: 9vh;
+    margin-top: 2vh;
+    margin-right: 2vh;
+    position: relative;
+    
+}
+
+.timeline-item-content {
+    border-radius: 5px;
+    background-color: $backgroundcolor;
+    -webkit-animation: slide-left 0.3s;
+    animation: slide-left 0.3s;
+}
+
+
+.timeline-item-content::after {
+    content: '';
+    z-index: -1;
+    background-color: $backgroundcolor;
+    position: absolute;
+    left: -.5vh;
+    top: 1vh;
+    transform: rotate(45deg);
+    width: 15px;
+    height: 15px;
+}
+
+.timeline-item .circle {
+    background-color: $backgroundcolor;
+    border: 3px solid $contrastcolor;
+    border-radius: 50%;
+    position: absolute;
+    top: .5vh;
+    left: -5.7vh;
+    width: 3vh;
+    height: 3vh;
+    z-index: 1;
+    -webkit-animation: slide-right 0.5s;
+    animation: slide-right 0.5s;
+}
+
+.timeline-item-content p {
+    margin: 5px;    
+}
+
+.timeline-item-content #project {
+    color: $headertextcolor;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.timeline-item-content #place {
+    color: $headertextcolor;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.timeline-item-content #description {
+    color: $textcolor;
+    font-size: .9em;
+    padding-top: 5px;
+}
+
+.timeline-item-content #date {
+    color: $textcolor;
+    font-size: .9em;
+    padding-top: 5px;
+}

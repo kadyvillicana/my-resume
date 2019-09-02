@@ -1,0 +1,14 @@
+@import '../../config/colors.scss';
+
+.button-link {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $contrastcolor;
+    color: $contrastcolor;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background-color: $contrastcolor;
+    color: white;
+}

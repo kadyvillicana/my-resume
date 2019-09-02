@@ -1,0 +1,95 @@
+@import '../../config/colors.scss';
+
+.typewriter {
+    padding: 40px;
+}
+
+.typewriter h1 {
+    margin: 0px;
+    color: $whitecolor;
+    font-size: 8vh;
+    overflow: hidden; 
+    border-right: .15em solid $contrastcolor;
+    white-space: nowrap;
+}
+
+.typewriter div {
+    padding-top: 30px;
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 1.8s;
+}
+
+.typewriter h2 {
+    letter-spacing: 0.2em;
+    line-height: 1.5em;
+    color: $whitecolor;
+    font-size: 2.5vh;
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 1.5s;
+}
+
+.typewriter h1:nth-child(1) {
+    width: 3em;
+    -webkit-animation: type .5s steps(40, end);
+    animation: type .5s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.typewriter h1:nth-child(2) {
+    width: 5em;
+    opacity: 0;
+    -webkit-animation: type 1s steps(40, end);
+    animation: type 1s steps(40, end);
+    animation-delay: .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.typewriter span {
+    color: $contrastcolor;
+    padding: 0;
+}
+
+#green {
+    color: $greencolor;
+}
+
+#white {
+    color: $whitecolor;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid $contrastcolor;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+  
+@-webkit-keyframes type {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    99.9% {
+        border-right: .15em solid $contrastcolor;
+    }
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+  
