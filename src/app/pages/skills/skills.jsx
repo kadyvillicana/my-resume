@@ -20,7 +20,7 @@ class Skills extends React.Component {
         const { skills } = this.state;
         return(
             <Row className='main-skills'>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} lg={6}>
                     <h1>Skills <span className='amp'>&amp;</span> Experience</h1>
                     <h2>
                         I've always like to be involved in most of the software development phases. Starting from requirements analysis to the product maintance. <br/><br/>
@@ -28,7 +28,7 @@ class Skills extends React.Component {
                         responsive frameworks, databases, unit testing and best code practices. <br/><br/>
                     </h2>
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} lg={6}>
                     {
                         skills.map( (skill, idx) => <p key={idx} className={`skill underlined`}>{skill}</p>)
                     }

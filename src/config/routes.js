@@ -6,7 +6,7 @@ const Routes = (props) => (
         <Switch>
             <Route exact path="/" component={() => <Async provider={() => import('../app/pages/home/home')} />} />
             <Route path="/contact" component={() => <Async provider={() => import('../app/pages/contact/contact')} />}/>
-            <Route path="/experience" component={() => <Async provider={() => import('../app/pages/experience/experience')} />}/>
+            <Route path="/projects" component={() => <Async provider={() => import('../app/pages/projects/projects')} />}/>
             <Route path="/skills" component={() => <Async provider={() => import('../app/pages/skills/skills')} />}/>
             <Route path="/hobbies" component={() => <Async provider={() => import('../app/pages/hobbies/hobbies')} />}/>
             <Redirect from="/**" to="/" />

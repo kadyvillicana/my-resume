@@ -1,0 +1,136 @@
+@import '../../../config/colors.scss';
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    margin: 10px 0;
+    right: 26px;
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 0;
+    left:28px
+}
+
+.timeline-item-content {
+    background-color: $whitecolor;
+    padding: 20px;
+    position: relative;
+    width: 600px;
+    max-width: 70%;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.timeline-item-content::after {
+    content: ' ';
+    background-color: $whitecolor;
+    position: absolute;
+    right: -7.5px;
+    top: calc(50% - 7.5px);
+    transform: rotate(45deg);
+    width: 15px;
+    height: 15px;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content::after {
+    right: auto;
+    left: -7.5px;
+}
+
+.timeline-item-content .circle {
+    background-color: $whitecolor;
+    border: 3px solid $contrastcolor;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 13px);
+    right: -40px;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content .circle {
+    right: auto;
+    left: -40px;
+}
+
+.timeline-item-content p {
+    margin: 3px;
+    display: block; /* or inline-block */
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.8em;    
+}
+
+.timeline-item-content #project {
+    color: $headertextcolor;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.timeline-item-content #place {
+    color: $headertextcolor;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.timeline-item-content #description {
+    color: $textcolor;
+    font-size: 1.1em;
+    padding-top: 5px;
+}
+
+.timeline-item-content #date {
+    color: $textcolor;
+    font-size: .9em;
+    padding-top: 5px;
+}
+
+.timeline-item-content #show-more {
+    color: $textcolor;
+    font-weight: bold;
+    font-size: .6em;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.max-height-300px {
+    max-height: 300px !important;
+}
+
+@media (max-width: 769px) {
+    .timeline-item {
+        width: 90%;
+        align-self: flex-end;
+        justify-content: flex-start;
+        left:28px
+    }
+
+    .timeline-item .timeline-item-content {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .timeline-item .timeline-item-content::after {
+        right: auto;
+        left: -7.5px;
+    }
+
+    .timeline-item .timeline-item-content .circle {
+        right: auto;
+        left: -40px;
+    }
+}

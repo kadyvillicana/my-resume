@@ -11,7 +11,7 @@ function App() {
       <div className='hide-on-mobile'>
         <NavBar />
       </div>
-      <Row middle='xs' style={{ margin: 0, height: '95%' }}>
+      <Row middle='xs' style={{ margin: 0, height: '95%', overflowY: 'auto' }}>
         <Col xs={12} className='padding-top-on-big-screen' >
           <Routes />
         </Col>

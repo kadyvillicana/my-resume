@@ -27,7 +27,7 @@
   height: 100vh;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .none-display-big-screen {
     display: none;
   }
@@ -36,7 +36,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .hide-on-mobile {
     display: none;
   }

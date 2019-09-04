@@ -14,9 +14,9 @@ class MobileNavBar extends React.Component {
         this.state = {
             routes: [
                 {routeName: 'HOME', routeNameAlias: 'H', route: '/', icon: faHome},
-                // {routeName: 'EXPERIENCE', routeNameAlias: 'E', route: '/experience', icon: faCoffee},
                 {routeName: 'SKILLS', routeNameAlias: 'S', route: '/skills', icon: faLaptop},
-                {routeName: 'HOBBIES', routeNameAlias: 'HO', route: '/hobbies', icon: faUser},
+                {routeName: 'PROJECTS', routeNameAlias: 'P', route: '/projects', icon: faCoffee},
+                {routeName: 'CONTACT', routeNameAlias: 'C', route: '/contact', icon: faUser},
             ]
         }
     }

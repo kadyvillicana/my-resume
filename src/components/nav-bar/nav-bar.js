@@ -11,9 +11,9 @@ class NavBar extends React.Component {
             navbarClosed: false,
             routes: [
                 {routeName: 'HOME', routeNameAlias: 'H', route: '/'},
-                // {routeName: 'EXPERIENCE', routeNameAlias: 'E', route: '/experience'},
                 {routeName: 'SKILLS', routeNameAlias: 'S', route: '/skills'},
-                {routeName: 'HOBBIES', routeNameAlias: 'HO', route: '/hobbies'},
+                {routeName: 'PROJECTS', routeNameAlias: 'E', route: '/projects'},
+                // {routeName: 'HOBBIES', routeNameAlias: 'HO', route: '/hobbies'},
                 {routeName: 'CONTACT', routeNameAlias: 'S', route: '/contact'},
             ]
         }
