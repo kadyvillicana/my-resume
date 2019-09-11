@@ -1,8 +1,9 @@
 @import '../../../config/colors.scss';
 
 .main-skills {
-    margin-top: 40px;
-    padding: 40px;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 0px;
 }
 
 .main-skills h1 {
@@ -10,7 +11,7 @@
     font-size: 6vh;
 }
 
-.main-skills h2 {
+.main-skills p {
     letter-spacing: 0.2em;
     line-height: 1.5em;
     color: $whitecolor;

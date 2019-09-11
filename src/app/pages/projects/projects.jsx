@@ -17,6 +17,8 @@ class Projects extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0)
+
         this._isMounted = true;
 
         this.props.firebase.infoRef().doc('experience')
@@ -37,7 +39,7 @@ class Projects extends React.Component {
     render(){
         const { projects } = this.state;
         return(
-            <div style={{height: '90vh', overflow: 'auto', marginTop: '30px'}}>
+            <div style={{height: '90vh', overflowY: 'auto', overflowX: 'none', scrollBehaviorX: 'none', marginTop: '30px'}}>
                 <TimeLine projects={projects}/>
             </div>
         )

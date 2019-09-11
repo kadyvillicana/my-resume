@@ -1,0 +1,77 @@
+@import '../../config/colors.scss';
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    form label {
+        color: $whitecolor;
+    }
+      
+    :focus {
+        outline: none;
+    }
+      
+    .container-input {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .input {
+        box-sizing: border-box;
+        width: 100%;
+        color: $textcolor;
+        background-color: $whitecolor;
+        border: 0;
+        padding: 20px;
+        margin-top: 20px;
+        font-size: 1.1em;
+        resize: none;
+        border-radius: 0;
+        outline: 0;
+        text-align: left;
+    }
+      
+    .input ~ .border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $contrastcolor;
+    }
+      
+    .input:focus ~ .border {
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .valid-field {
+        width: 100% !important;
+        background-color: $greencolor !important;
+    }
+
+    .textarea ~ .border {
+        bottom: 6px;
+    }
+
+    .button-link {
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid $contrastcolor;
+        color: $contrastcolor;
+        text-decoration: none;
+        font-size: 1.5vh;
+    }
+    
+    .button-link:hover {
+        background-color: $contrastcolor;
+        color: $whitecolor;
+    }
+
+}
+
+  
+  
