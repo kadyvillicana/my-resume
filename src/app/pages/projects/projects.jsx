@@ -1,9 +1,12 @@
 import React from 'react';
 import TimeLine from '../../../components/timeline/timeline';
+import { withFirebase } from '../../../config/firebase';
 
 import { PROJECTS } from '../../../config/defaultdata';
 
 class Projects extends React.Component {
+
+    _isMounted = false;
 
     constructor(props){
         super(props);
@@ -14,6 +17,21 @@ class Projects extends React.Component {
     }
 
     componentDidMount() {
+        this._isMounted = true;
+
+        this.props.firebase.infoRef().doc('experience')
+            .onSnapshot((doc) => {
+                if(this._isMounted) {
+                    const data = doc.data();
+                    if(data.projects) {
+                        this.setState({projects: data.projects})
+                    }
+                }
+        });
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
    
     render(){
@@ -26,4 +44,4 @@ class Projects extends React.Component {
     }
 }
 
-export default Projects;
+export default withFirebase(Projects);

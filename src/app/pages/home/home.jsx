@@ -1,6 +1,7 @@
 import React from 'react';
 import MyName from '../../../components/my-name/my-name';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { withFirebase } from '../../../config/firebase';
 
 import './home.scss';
 
@@ -24,4 +25,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default withFirebase(Home);

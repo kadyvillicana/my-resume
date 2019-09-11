@@ -1,0 +1,68 @@
+@import '../../../config/colors.scss';
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+
+    h1 {
+        color: $whitecolor;
+        font-size: 6vh;
+        text-align: center;
+    }
+
+    #contrast {
+        color: $contrastcolor;
+    }
+
+    form label {
+        color: $whitecolor;
+    }
+      
+    :focus {
+        outline: none;
+    }
+      
+    .container-input {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .input {
+        width: 100%;
+        color: $whitecolor;
+        background-color: transparent;
+        border: 0;
+        padding: 20px;
+        font-size: 1.5em;
+        border-bottom: 1px solid $whitecolor;
+        resize: none;
+    }
+      
+    .input ~ .border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $contrastcolor;
+    }
+      
+    .input:focus ~ .border {
+        width: 100%;
+        transition: 0.5s;
+    }
+
+    .valid-field {
+        width: 100% !important;
+        background-color: $greencolor !important;
+    }
+
+    .textarea ~ .border {
+        bottom: 6px;
+    }
+
+}
+
+  
+  

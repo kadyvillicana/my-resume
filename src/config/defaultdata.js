@@ -20,7 +20,7 @@ const PROJECTS = [
     {
         project: 'Easy Survey',
         place: 'Morelia, Mexico - Scio Consulting',
-        description: ' Define architecture for mobile app. Developing REST API. Developing cross- platform mobile app. Responsible to upload mobile apps to beta stages and production.',
+        description: 'Define architecture for mobile app. Developing REST API. Developing cross- platform mobile app. Responsible to upload mobile apps to beta stages and production.',
         date: '2017 - 2018'
     },
     {
