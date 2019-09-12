@@ -69,7 +69,8 @@ class FormComponent extends React.Component {
         this.props.firebase.contactRef().add({
             email,
             name,
-            message
+            message,
+            createdAt: new Date().toISOString()
         });
     }
 
