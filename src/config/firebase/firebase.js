@@ -18,6 +18,7 @@ class Firebase {
     }
 
     infoRef = () => this.db.collection('info');
+    contactRef = () => this.db.collection('contact');
 
 }
 

@@ -52,6 +52,10 @@
         background-color: $greencolor !important;
     }
 
+    .textarea {
+        height: 160px;
+    }
+
     .textarea ~ .border {
         bottom: 6px;
     }
@@ -69,6 +73,16 @@
     .button-link:hover {
         background-color: $contrastcolor;
         color: $whitecolor;
+    }
+
+    button:disabled {
+        border: 2px solid $blackcolor;
+        color: $blackcolor;
+
+        &:hover {
+            background-color: transparent;
+            color: $blackcolor;
+        }
     }
 
 }

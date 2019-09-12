@@ -16,7 +16,7 @@ class TimeLineItem extends React.Component {
     }
     
     render() {
-        const {date, description, project, place} = this.props.project || {};
+        const {date, description, project, place, url, techStack} = this.props.project || {};
         const {showingMore} = this.state; 
         return(
             <div className='timeline-item'>
@@ -28,7 +28,9 @@ class TimeLineItem extends React.Component {
                         <p onClick={this.showMoreFn} id='show-more'>
                             {showingMore ? 'SHOW LESS' : 'SHOW MORE'}
                         </p>
-                        <p id="date">{date}</p>
+                        {
+                            url ? <a href={url}>More info about this project</a> : ''
+                        }
                     </div>
                     <span className="circle" />
                 </div>
