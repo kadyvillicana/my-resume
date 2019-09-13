@@ -16,7 +16,7 @@ class TimeLineItem extends React.Component {
     }
     
     render() {
-        const {date, description, project, place, url, techStack} = this.props.project || {};
+        const {description, project, place, url} = this.props.project || {};
         const {showingMore} = this.state; 
         return(
             <div className='timeline-item'>
